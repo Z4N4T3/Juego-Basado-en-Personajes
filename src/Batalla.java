@@ -101,17 +101,35 @@ public class Batalla {
 
 
         for (int turno = 0; turno < numTurnos; turno++) {
+            System.out.println("\n=============================");
             System.out.println("Turno " + (turno + 1) + ":");
+            System.out.println("=============================");
+
             for (Humano humano : humans) {
+
                 Angeles angel = angels.get(rand.nextInt(angels.size()));
                 Demonios demonio = demons.get(rand.nextInt(demons.size()));
+
+                System.out.println("\nHumano en conflicto:");
+                humano.getStats();
+
+                System.out.println("\nSe enfrenta al Ángel:");
+                angel.getStats();
+
+                System.out.println("\nY al Demonio:");
+                demonio.getStats();
+
+
                 humano.conflictoMoral(angel, demonio);
 
-                if(humano.rezar()){
-                    System.out.println("Estoy rezando");
-                }
+
+                System.out.println("\nResultado tras el conflicto moral:");
+                humano.getStats();
             }
         }
+
+        System.out.println("\n=============================");
+
 
         for (Humano human : humans) {
             human.getStats();
