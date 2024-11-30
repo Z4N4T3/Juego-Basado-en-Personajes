@@ -14,9 +14,9 @@ public  class Demonios extends Incorporeo implements Espiritual {
 
     }
     public void getStats(){
-        System.out.println("Fe:"+fe);
-        System.out.println("Maldad:"+maldad);
-        System.out.println("Bondad:"+bondad);
+        System.out.println("Fe: " + String.format("%.1f", fe));
+        System.out.println("Maldad: " + String.format("%.1f", maldad));
+        System.out.println("Bondad: " + String.format("%.1f", bondad));
 
     }
 
@@ -57,6 +57,7 @@ public  class Demonios extends Incorporeo implements Espiritual {
 
     @Override
     public boolean rezar() {
-        return false; // Lógica de oración
+        System.out.println("Estoy rezando . . .");
+        return false;
     }
 }

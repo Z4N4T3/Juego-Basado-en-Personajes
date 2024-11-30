@@ -64,7 +64,9 @@ public class Batalla {
             }
         }while(qty>5 || qty<=0);
 
-
+        for (Angeles angel:angels){
+            angel.getStats();
+        }
 
         qty=3;
         do{
@@ -84,10 +86,12 @@ public class Batalla {
                 }
             }
         }while(qty>5 || qty<=0);
+        for(Demonios dem : demons){
+            dem.getStats();
+        }
 
         System.out.println("Ingresa el numero de turnos: ");
         int numTurnos=sc.nextInt();
-
 
 
 

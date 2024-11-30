@@ -20,15 +20,15 @@ public class Humano extends Fisico implements Espiritual {
         this.nombre = nombre;
     }
 
-    public void getStats(){
+    public void getStats() {
         System.out.println("Nombre: " + nombre);
-        System.out.println("Inteligencia: " + inteligencia);
-        System.out.println("Fe: " + fe);
-        System.out.println("Maldad: " + maldad);
-        System.out.println("Bondad: " + bondad);
-        System.out.println("Alma: " + alma);
-
+        System.out.println("Inteligencia: " + String.format("%.1f", inteligencia));
+        System.out.println("Fe: " + String.format("%.1f", fe));
+        System.out.println("Maldad: " + String.format("%.1f", maldad));
+        System.out.println("Bondad: " + String.format("%.1f", bondad));
+        System.out.println("Alma: " + String.format("%.1f", alma));
     }
+
     public double getInteligencia() {
         return inteligencia;
     }
@@ -90,6 +90,8 @@ public class Humano extends Fisico implements Espiritual {
     @Override
     public boolean rezar() {
         if (fe>50 || bondad >60){
+
+            System.out.println("Estoy rezando . . .");
             return true;
         }
         else{

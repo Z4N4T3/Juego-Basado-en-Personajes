@@ -18,9 +18,9 @@ public  class Angeles extends Incorporeo implements Espiritual {
                 / (this.fe - this.maldad);
     }
     public void getStats(){
-        System.out.println("Fe: "+ fe);
-        System.out.println("Maldad: "+ maldad);
-        System.out.println("Bondad: "+ bondad);
+        System.out.println("Fe: " + String.format("%.1f", fe));
+        System.out.println("Maldad: " + String.format("%.1f", maldad));
+        System.out.println("Bondad: " + String.format("%.1f", bondad));
     }
 
     @Override
@@ -53,6 +53,7 @@ public  class Angeles extends Incorporeo implements Espiritual {
 
     @Override
     public boolean rezar() {
+        System.out.println("Estoy rezando . . .");
         return true;
     }
 }
