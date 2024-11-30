@@ -126,14 +126,31 @@ public class Batalla {
                 System.out.println("\nResultado tras el conflicto moral:");
                 humano.getStats();
             }
+
         }
 
         System.out.println("\n=============================");
 
 
-        for (Humano human : humans) {
-            human.getStats();
+        DiosCristiano diosito = new DiosCristiano(
+
+                rand.nextDouble() * 200,
+                rand.nextDouble() * 100,
+                rand.nextDouble() * 100,
+                numAng,
+                numDem
+                );
+        for (Humano humano : humans) {
+            System.out.println("\nJUICIO FINAL");
+            humano.getStats();
+
+            if (diosito.esBuenHombre(humano)) {
+                System.out.println("diosito dice que el humano es un buen Hombre ");
+            } else {
+                System.out.println("diosito dice que el humano no es considerado un buen hombre");
+            }
         }
+
 
 
 
