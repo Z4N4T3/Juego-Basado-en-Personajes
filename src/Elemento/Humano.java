@@ -36,7 +36,6 @@ public class Humano extends Fisico implements Espiritual {
     public double getBondad() {
         return bondad;
     }
-
     public double getMaldad() {
         return maldad;
     }
