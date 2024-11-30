@@ -17,6 +17,11 @@ public  class Angeles extends Incorporeo implements Espiritual {
         return Math.sqrt(Math.pow(h.getBondad(), 2) - Math.pow(h.getMaldad(), 2) - h.getInteligencia())
                 / (this.fe - this.maldad);
     }
+    public void getStats(){
+        System.out.println("Fe: "+ fe);
+        System.out.println("Maldad: "+ maldad);
+        System.out.println("Bondad: "+ bondad);
+    }
 
     @Override
     public double luchar(Humano h) {

@@ -13,6 +13,12 @@ public  class Demonios extends Incorporeo implements Espiritual {
         return (h.getFe() / this.fe) * (this.bondad - this.maldad) / this.fe;
 
     }
+    public void getStats(){
+        System.out.println("Fe:"+fe);
+        System.out.println("Maldad:"+maldad);
+        System.out.println("Bondad:"+bondad);
+
+    }
 
     @Override
     public double guiar(Humano h) {

@@ -3,18 +3,31 @@ package Elemento;
 import java.util.Random;
 
 public class Humano extends Fisico implements Espiritual {
+    private String nombre;
     private double inteligencia;
     private double fe;
     private double maldad;
     private double bondad;
     private double alma;
 
-    public Humano(double inteligencia, double fe, double maldad, double bondad, double alma) {
+    public Humano(double inteligencia, double fe, double maldad, double bondad, double alma, String nombre) {
+
         this.inteligencia = inteligencia;
         this.fe = fe;
         this.maldad = maldad;
         this.bondad = bondad;
         this.alma = alma;
+        this.nombre = nombre;
+    }
+
+    public void getStats(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Inteligencia: " + inteligencia);
+        System.out.println("Fe: " + fe);
+        System.out.println("Maldad: " + maldad);
+        System.out.println("Bondad: " + bondad);
+        System.out.println("Alma: " + alma);
+
     }
     public double getInteligencia() {
         return inteligencia;
