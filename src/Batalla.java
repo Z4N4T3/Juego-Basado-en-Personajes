@@ -113,10 +113,10 @@ public class Batalla {
                 System.out.println("\nHumano en conflicto:");
                 humano.getStats();
 
-                System.out.println("\nSe enfrenta al Ángel:");
+                System.out.println("\nSe enfrenta al angel:");
                 angel.getStats();
 
-                System.out.println("\nY al Demonio:");
+                System.out.println("\nSe enfrenta  al demonio:");
                 demonio.getStats();
 
 
