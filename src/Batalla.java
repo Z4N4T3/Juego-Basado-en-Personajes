@@ -89,8 +89,16 @@ public class Batalla {
             dem.getStats();
         }
 
-        System.out.println("Ingresa el numero de turnos: ");
-        int numTurnos = sc.nextInt();
+        int numTurnos =3;
+        do{
+            System.out.println("Ingresa el numero de turnos: ");
+            numTurnos= sc.nextInt();
+            if (numTurnos >5 || numTurnos<=0) {
+                System.out.println("valor no valido!!!");
+            }
+
+        }while(numTurnos >5 || numTurnos<=0);
+
 
         for (int turno = 0; turno < numTurnos; turno++) {
             System.out.println("Turno " + (turno + 1) + ":");
@@ -98,6 +106,10 @@ public class Batalla {
                 Angeles angel = angels.get(rand.nextInt(angels.size()));
                 Demonios demonio = demons.get(rand.nextInt(demons.size()));
                 humano.conflictoMoral(angel, demonio);
+
+                if(humano.rezar()){
+                    System.out.println("Estoy rezando");
+                }
             }
         }
 
